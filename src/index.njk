@@ -1,0 +1,5 @@
+<ul>
+{% for imagePost in imagePosts %}
+    <li><a href="/posts/{{ imagePost.title | slugify }}/">{{ imagePost.title }}</a></li>
+{% endfor %}
+</ul>

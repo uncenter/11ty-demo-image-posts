@@ -1,0 +1,13 @@
+---
+pagination:
+  data: imagePosts
+  size: 1
+  alias: imagePost
+permalink: "/posts/{{ imagePost.title | slugify }}/"
+---
+
+<a href="/">&larr; Back</a>
+<hr>
+<h2>{{ imagePost.title }}</h2>
+<p>Date: {{ imagePost.date }}</p>
+<img src="{{ imagePost.image }}" alt="{{ imagePost.title }}">
