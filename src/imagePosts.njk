@@ -9,5 +9,5 @@ permalink: "/posts/{{ imagePost.title | slugify }}/"
 <a href="/">&larr; Back</a>
 <hr>
 <h2>{{ imagePost.title }}</h2>
-<p>Date: {{ imagePost.date }}</p>
+<p>{{ imagePost.date | toLuxonDateTime | readableDate }}</p>
 <img src="{{ imagePost.image }}" alt="{{ imagePost.title }}">
