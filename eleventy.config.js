@@ -6,7 +6,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("toLuxonDateTime", (dateString) => {
 		const date = DateTime.fromISO(dateString, { zone: "utc" });
 		if (!date.isValid) {
-			throw new Error(`date value "${dateString}" is invalid`);
+			throw new Error(
+				`[toLuxonDateTime (filter)] date value "${dateString}" is invalid`
+			);
 		}
 		return date.toJSDate();
 	});
